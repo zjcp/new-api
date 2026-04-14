@@ -46,7 +46,7 @@ const FooterBar = () => {
         <div className='absolute hidden md:block top-[204px] left-[-100px] w-[151px] h-[151px] rounded-full bg-[#FFD166]'></div>
         <div className='absolute md:hidden bottom-[20px] left-[-50px] w-[80px] h-[80px] rounded-full bg-[#FFD166] opacity-60'></div>
 
-        {isDemoSiteMode && (
+        {/* {isDemoSiteMode && (
           <div className='flex flex-col md:flex-row justify-between w-full max-w-[1110px] mb-10 gap-8'>
             <div className='flex-shrink-0'>
               <img
@@ -186,7 +186,7 @@ const FooterBar = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         <div className='flex flex-col md:flex-row items-center justify-between w-full max-w-[1110px] gap-6'>
           <div className='flex flex-wrap items-center gap-2'>
@@ -195,7 +195,7 @@ const FooterBar = () => {
             </Typography.Text>
           </div>
 
-          <div className='text-sm'>
+          {/* <div className='text-sm'>
             <span className='!text-semi-color-text-1'>
               {t('设计与开发由')}{' '}
             </span>
@@ -207,7 +207,7 @@ const FooterBar = () => {
             >
               New API
             </a>
-          </div>
+          </div> */}
         </div>
       </footer>
     ),
@@ -227,7 +227,7 @@ const FooterBar = () => {
               className='custom-footer na-cb6feafeb3990c78 text-sm !text-semi-color-text-1'
               dangerouslySetInnerHTML={{ __html: footer }}
             ></div>
-            <div className='text-sm flex-shrink-0'>
+            {/* <div className='text-sm flex-shrink-0'>
               <span className='!text-semi-color-text-1'>
                 {t('设计与开发由')}{' '}
               </span>
@@ -239,7 +239,7 @@ const FooterBar = () => {
               >
                 New API
               </a>
-            </div>
+            </div> */}
           </div>
         </footer>
       ) : (
