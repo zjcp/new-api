@@ -20,18 +20,13 @@ For commercial licensing, please contact support@quantumnous.com
 import React, { useEffect, useState } from 'react';
 import { API, showError } from '../../helpers';
 import { marked } from 'marked';
-import { Empty } from '@douyinfe/semi-ui';
-import {
-  IllustrationConstruction,
-  IllustrationConstructionDark,
-} from '@douyinfe/semi-illustrations';
 import { useTranslation } from 'react-i18next';
+import { IconInfoCircle, IconMail, IconClock } from '@douyinfe/semi-icons';
 
 const About = () => {
   const { t } = useTranslation();
   const [about, setAbout] = useState('');
   const [aboutLoaded, setAboutLoaded] = useState(false);
-  const currentYear = new Date().getFullYear();
 
   const displayAbout = async () => {
     setAbout(localStorage.getItem('about') || '');
@@ -55,101 +50,170 @@ const About = () => {
     displayAbout().then();
   }, []);
 
-  const emptyStyle = {
-    padding: '24px',
-  };
-
-  const customDescription = (
-    <div style={{ textAlign: 'center' }}>
-      <p>{t('可在设置页面设置关于内容，支持 HTML & Markdown')}</p>
-      {t('New API项目仓库地址：')}
-      <a
-        href='https://github.com/QuantumNous/new-api'
-        target='_blank'
-        rel='noopener noreferrer'
-        className='!text-semi-color-primary'
-      >
-        https://github.com/QuantumNous/new-api
-      </a>
-      <p>
-        <a
-          href='https://github.com/QuantumNous/new-api'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='!text-semi-color-primary'
-        >
-          NewAPI
-        </a>{' '}
-        {t('© {{currentYear}}', { currentYear })}{' '}
-        <a
-          href='https://github.com/QuantumNous'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='!text-semi-color-primary'
-        >
-          QuantumNous
-        </a>{' '}
-        {t('| 基于')}{' '}
-        <a
-          href='https://github.com/songquanpeng/one-api/releases/tag/v0.5.4'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='!text-semi-color-primary'
-        >
-          One API v0.5.4
-        </a>{' '}
-        © 2023{' '}
-        <a
-          href='https://github.com/songquanpeng'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='!text-semi-color-primary'
-        >
-          JustSong
-        </a>
-      </p>
-      <p>
-        {t('本项目根据')}
-        <a
-          href='https://github.com/songquanpeng/one-api/blob/v0.5.4/LICENSE'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='!text-semi-color-primary'
-        >
-          {t('MIT许可证')}
-        </a>
-        {t('授权，需在遵守')}
-        <a
-          href='https://www.gnu.org/licenses/agpl-3.0.html'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='!text-semi-color-primary'
-        >
-          {t('AGPL v3.0协议')}
-        </a>
-        {t('的前提下使用。')}
-      </p>
-    </div>
-  );
-
   return (
     <div className='mt-[60px] px-2'>
       {aboutLoaded && about === '' ? (
-        <div className='flex justify-center items-center h-screen p-8'>
-          <Empty
-            image={
-              <IllustrationConstruction style={{ width: 150, height: 150 }} />
-            }
-            darkModeImage={
-              <IllustrationConstructionDark
-                style={{ width: 150, height: 150 }}
-              />
-            }
-            description={t('管理员暂时未设置任何关于内容')}
-            style={emptyStyle}
-          >
-            {customDescription}
-          </Empty>
+        <div className='flex justify-center w-full'>
+          <div className='w-full max-w-[1000px] py-10'>
+            <div
+              className='rounded-2xl p-5 mb-8 flex items-start gap-4'
+              style={{
+                backgroundColor: 'var(--semi-color-bg-1)',
+                boxShadow: 'var(--semi-shadow-elevated)',
+              }}
+            >
+              <div
+                className='w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-sm'
+                style={{
+                  color: 'var(--semi-color-info)',
+                  backgroundColor: 'rgba(22, 119, 255, 0.12)',
+                }}
+              >
+                <IconInfoCircle style={{ fontSize: '28px' }} />
+              </div>
+              <div className='pt-1'>
+                <div style={{ fontWeight: 'bold', color: 'var(--semi-color-text-0)', marginBottom: '4px' }}>
+                  {t('需要帮助?')}
+                </div>
+                <div style={{ fontSize: '13px', color: 'var(--semi-color-text-2)' }}>
+                  {t('我们的客服团队随时准备为您提供专业的支持服务')}
+                </div>
+              </div>
+            </div>
+
+            <div className='mb-10'>
+              <h1
+                className='text-2xl font-bold mb-4'
+                style={{ color: 'var(--semi-color-text-0)' }}
+              >
+                {t('客户支持')}
+              </h1>
+              <p
+                className='text-base'
+                style={{ color: 'var(--semi-color-text-2)' }}
+              >
+                {t('我们随时为您提供帮助。请选择以下任一方式与我们联系。')}
+              </p>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-10'>
+              <div
+                className='rounded-2xl p-6 text-left transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col h-full'
+                style={{
+                  backgroundColor: 'var(--semi-color-bg-1)',
+                  border: '1px solid var(--semi-color-border)',
+                  boxShadow: 'var(--semi-shadow-elevated)',
+                }}
+              >
+                <div
+                  className='w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-white shadow-sm'
+                  style={{ backgroundColor: 'rgba(0, 132, 255, 0.92)' }}
+                >
+                  <IconMail style={{ fontSize: '26px' }} />
+                </div>
+                <h3
+                  className='text-lg m-0 mb-2'
+                  style={{ color: 'var(--semi-color-text-0)' }}
+                >
+                  {t('邮件支持')}
+                </h3>
+                <p
+                  className='text-[15px] m-0 font-semibold tracking-wide leading-relaxed'
+                  style={{ color: 'var(--semi-color-primary)' }}
+                >
+                  <a href='mailto:support@atokenapi.com'>
+                    support@atokenapi.com
+                  </a>
+                </p>
+              </div>
+
+              <div
+                className='rounded-2xl p-6 text-left transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col h-full'
+                style={{
+                  backgroundColor: 'var(--semi-color-bg-1)',
+                  border: '1px solid var(--semi-color-border)',
+                  boxShadow: 'var(--semi-shadow-elevated)',
+                }}
+              >
+                <div
+                  className='w-14 h-14 rounded-2xl flex items-center justify-center mb-5 text-white shadow-sm'
+                  style={{ backgroundColor: 'rgba(255, 184, 77, 0.96)' }}
+                >
+                  <IconClock style={{ fontSize: '26px' }} />
+                </div>
+                <h3
+                  className='text-lg m-0 mb-2'
+                  style={{ color: 'var(--semi-color-text-0)' }}
+                >
+                  {t('在线时间')}
+                </h3>
+                <p
+                  className='text-sm m-0 leading-relaxed'
+                  style={{ color: 'var(--semi-color-text-2)' }}
+                >
+                  {t('周一至周日')}
+                  <br />
+                  10:00 - 24:00
+                </p>
+              </div>
+
+              <div
+                className='rounded-2xl p-6 text-left transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between h-full'
+                style={{
+                  backgroundColor: 'var(--semi-color-bg-1)',
+                  border: '1px solid var(--semi-color-border)',
+                  boxShadow: 'var(--semi-shadow-elevated)',
+                }}
+              >
+                <div className='mb-4'>
+                  <div
+                    className='font-bold text-lg mb-2'
+                    style={{ color: 'var(--semi-color-text-0)' }}
+                  >
+                    {t('客服二维码')}
+                  </div>
+                  <p
+                    className='text-[13px] m-0 leading-relaxed'
+                    style={{ color: 'var(--semi-color-text-2)' }}
+                  >
+                    {t('扫描二维码联系客服')}
+                  </p>
+                </div>
+                <div
+                  className='p-4 inline-block rounded-2xl self-start'
+                  style={{
+                    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+                    border: '1px solid var(--semi-color-border)',
+                  }}
+                >
+                  <div className='flex gap-3 items-start justify-center'>
+                    <div className='flex flex-col items-center gap-2'>
+                      <img
+                        src='/tel.png'
+                        alt='Telegram'
+                        className='w-[104px] h-[104px] rounded-xl object-cover'
+                        style={{ backgroundColor: 'var(--semi-color-bg-1)' }}
+                      />
+                      <div className='text-[12px] text-center' style={{ color: 'var(--semi-color-text-2)' }}>
+                        Telegram
+                      </div>
+                    </div>
+                    <div className='flex flex-col items-center gap-2'>
+                      <img
+                        src='/wx.png'
+                        alt='Wechat'
+                        className='w-[104px] h-[104px] rounded-xl object-cover'
+                        style={{ backgroundColor: 'var(--semi-color-bg-1)' }}
+                      />
+                      <div className='text-[12px] text-center' style={{ color: 'var(--semi-color-text-2)' }}>
+                        Wechat
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <>

@@ -3469,6 +3469,15 @@
     "（当前仅支持易支付接口，默认使用上方服务器地址作为回调地址！）": "(Actuellement, seule l'interface Epay est prise en charge, l'adresse du serveur ci-dessus est utilisée par défaut comme adresse de rappel !)",
     "，当前无生效订阅，将自动使用钱包": ", aucun abonnement actif, le portefeuille sera utilisé automatiquement.",
     "，时间：": ", time:",
-    "，点击更新": ", cliquez sur Mettre à jour"
+    "，点击更新": ", cliquez sur Mettre à jour",
+    "需要帮助?": "Besoin d'aide ?",
+    "我们的客服团队随时准备为您提供专业的支持服务": "Notre équipe du service client est toujours prête à vous fournir une assistance professionnelle.",
+    "客户支持": "Support Client",
+    "我们随时为您提供帮助。请选择以下任一方式与我们联系。": "Nous sommes toujours là pour vous aider. Veuillez nous contacter via l'une des méthodes suivantes.",
+    "邮件支持": "Support par Email",
+    "在线时间": "Heures en Ligne",
+    "周一至周日": "Lundi au Dimanche",
+    "客服二维码": "Code QR du Service Client",
+    "扫描二维码联系客服": "Scannez le code QR pour contacter le service client"
   }
 }

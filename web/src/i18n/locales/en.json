@@ -3513,6 +3513,15 @@
     "（当前仅支持易支付接口，默认使用上方服务器地址作为回调地址！）": "(Currently only supports Epay interface, the default callback address is the server address above!)",
     "，当前无生效订阅，将自动使用钱包": ", no active subscription. Wallet will be used automatically.",
     "，时间：": ",time:",
-    "，点击更新": ", click Update"
+    "，点击更新": ", click Update",
+    "需要帮助?": "Need help?",
+    "我们的客服团队随时准备为您提供专业的支持服务": "Our customer service team is always ready to provide you with professional support.",
+    "客户支持": "Customer Support",
+    "我们随时为您提供帮助。请选择以下任一方式与我们联系。": "We are always here to help. Please contact us via any of the following methods.",
+    "邮件支持": "Email Support",
+    "在线时间": "Online Time",
+    "周一至周日": "Monday to Sunday",
+    "客服二维码": "Customer Service QR Code",
+    "扫描二维码联系客服": "Scan the QR code to contact customer service"
   }
 }

@@ -4018,6 +4018,15 @@
     "（当前仅支持易支付接口，默认使用上方服务器地址作为回调地址！）": "(Hiện tại chỉ hỗ trợ giao diện Epay, địa chỉ máy chủ phía trên được sử dụng làm địa chỉ gọi lại theo mặc định!)",
     "，当前无生效订阅，将自动使用钱包": ", hiện không có gói đăng ký hiệu lực, sẽ tự động dùng ví.",
     "，时间：": ", thời gian:",
-    "，点击更新": ", nhấn để cập nhật"
+    "，点击更新": ", nhấn để cập nhật",
+    "需要帮助?": "Cần giúp đỡ?",
+    "我们的客服团队随时准备为您提供专业的支持服务": "Đội ngũ chăm sóc khách hàng của chúng tôi luôn sẵn sàng cung cấp hỗ trợ chuyên nghiệp cho bạn.",
+    "客户支持": "Hỗ trợ khách hàng",
+    "我们随时为您提供帮助。请选择以下任一方式与我们联系。": "Chúng tôi luôn sẵn sàng giúp đỡ. Vui lòng liên hệ với chúng tôi qua bất kỳ phương thức nào dưới đây.",
+    "邮件支持": "Hỗ trợ qua Email",
+    "在线时间": "Thời gian trực tuyến",
+    "周一至周日": "Thứ Hai đến Chủ Nhật",
+    "客服二维码": "Mã QR CSKH",
+    "扫描二维码联系客服": "Quét mã QR để liên hệ với CSKH"
   }
 }
